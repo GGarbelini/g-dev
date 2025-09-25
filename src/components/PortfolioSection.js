@@ -1,5 +1,10 @@
 import React from 'react';
 import './PortfolioSection.css';
+import projeto1 from "../assets/projeto1.png";
+import projeto2 from "../assets/projeto2.png";
+import projeto3 from "../assets/projeto3.png";
+import projeto4 from "../assets/projeto4.png";
+
 
 function PortfolioSection() {
   // Array com os projetos do portfólio
@@ -8,28 +13,28 @@ function PortfolioSection() {
       id: 1,
       title: "Tradição Doces",
       category: "Doceria",
-      image: "/assets/projeto1.png", // Ajuste o caminho conforme sua estrutura
+      image: projeto1, // Ajuste o caminho conforme sua estrutura
       description: "Página de vendas desenvolvida para conectar a empresa aos clientes e aumentar os pedidos via WhatsApp."
     },
     {
       id: 2,
       title: "DivMark",
       category: "Marketing Digital",
-      image: "/assets/projeto2.png", // Ajuste o caminho conforme sua estrutura
+      image: projeto2, // Ajuste o caminho conforme sua estrutura
       description: "Landing page desenvolvida para uma agência de Marketing Digital, com foco em atrair e converter novos clientes."
     },
     {
       id: 3,
       title: "JC Assessoria Jurídica",
       category: "Advocacia",
-      image: "/assets/projeto3.png", // Ajuste o caminho conforme sua estrutura
+      image: projeto3, // Ajuste o caminho conforme sua estrutura
       description: "Página institucional criada para fortalecer a presença digital do escritório de advocacia e gerar oportunidades de atendimento."
     },
     {
       id: 4,
       title: "Joyce Cordeiro",
       category: "Lifestyle",
-      image: "/assets/projeto4.png", // Ajuste o caminho conforme sua estrutura
+      image: projeto4, // Ajuste o caminho conforme sua estrutura
       description: "Bio page desenvolvida para concentrar, em um só link, a divulgação dos produtos e serviços nas redes sociais."
     }
   ];
