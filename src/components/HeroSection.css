@@ -1,0 +1,177 @@
+.hero-section {
+  background-color: #121212;
+  color: white;
+  padding: 100px 0 80px 0; /* Padding extra no topo para compensar o header fixo */
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #fff, #3dff8b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 30px; /* Reduzido de 30px para 20px para acomodar a lista */
+  line-height: 1.6;
+}
+
+/* Novo estilo para a lista de benefícios */
+.hero-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.hero-benefits li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-benefits li::before {
+  content: "✓";
+  color: #3dff8b;
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+.cta-button {
+  background-color: #3dff8b;
+  color: #121212;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(61, 255, 139, 0.5);
+  margin: 20px;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(61, 255, 139, 0.8);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(61, 255, 139, 0.3));
+  /* Definindo tamanhos específicos para diferentes breakpoints */
+  width: 450px; /* Tamanho padrão reduzido para desktop */
+  margin: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .hero-image img {
+    width: 400px; /* Tamanho para telas grandes */
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-image img {
+    width: 350px; /* Tamanho para tablets */
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .hero-text {
+    padding-right: 0;
+    margin-top: 30px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-benefits {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-benefits li {
+    text-align: left;
+  }
+  
+  .hero-image {
+    margin-bottom: 20px;
+  }
+  
+  .hero-image img {
+    width: 580px; /* Tamanho reduzido para mobile */
+  }
+
+  .cta-button {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image img {
+    width: 620px; /* Tamanho ainda menor para smartphones pequenos */
+    margin: 100px 10px 50px
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .hero-benefits li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .cta-button{
+    margin: 60px;
+  }
+}

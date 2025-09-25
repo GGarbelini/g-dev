@@ -1,0 +1,144 @@
+.header {
+  background-color: #121212;
+  padding:  0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001; /* Aumentado para garantir que fique acima de outros elementos */
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #3dff8b;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+.hamburger-menu.open .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0; 
+}
+
+.menu li {
+  margin-left: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #3dff8b;
+}
+
+.contato-btn {
+  background-color: #3dff8b;
+  color: #121212 !important;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.contato-btn:hover {
+  background-color: white;
+  color: #121212 !important;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+    position: relative;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 90px; /* Ajustado para ficar abaixo do header com logo de 60px + padding */
+    left: 0;
+    width: 100%;
+    background-color: #121212; /* Alterado para manter o tema escuro */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    z-index: 99;
+  }
+  
+  .menu.active {
+    height: auto; /* Alterado para mostrar todo o conteúdo */
+    padding-bottom: 20px; /* Adiciona espaço na parte inferior */
+  }
+  
+  .menu ul {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  
+  .menu li {
+    margin: 15px 0; /* Aumentado para melhor espaçamento */
+    margin-left: 0; /* Remove a margem esquerda que é usada no desktop */
+    text-align: center;
+  }
+  
+  .menu a {
+    display: block; /* Faz o link ocupar toda a largura para área de clique maior */
+    padding: 0;
+  }
+  
+  .contato-btn {
+    display: inline-block; /* Mantém o botão como inline-block */
+    margin: 10px auto; /* Centraliza o botão */
+  }
+}

@@ -1,0 +1,222 @@
+.testimonials-section {
+    background-color: #121212;
+    color: white;
+    padding: 60px 0;
+    position: relative;
+    overflow-x: hidden; /* Previne rolagem horizontal */
+}
+
+.testimonials-section::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(61, 255, 139, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+}
+
+.testimonials-section .container {
+    width: 90%; /* Usa 90% da largura disponível */
+    max-width: 1140px; /* Limita a largura máxima */
+    margin: 0 auto;
+    padding: 0;
+    
+}
+
+.testimonials-section .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+}
+
+.testimonials-section .section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Largura reduzida */
+    height: 4px;
+    background-color: #3dff8b;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    margin: 0 auto 40px;
+}
+
+.testimonial-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.testimonial-card::after {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 50px; /* Tamanho reduzido */
+    color: rgba(61, 255, 139, 0.1);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* Movimento reduzido */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid #3dff8b;
+}
+
+.stars {
+    color: #3dff8b;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial-text {
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.client-info {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.client-name {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ffffff;
+    font-style: normal;
+}
+
+.client-position {
+    color: #999;
+    font-size: 0.85rem;
+    margin-top: 3px;
+}
+
+.client-industry {
+    margin-left: 5px;
+    color: #3dff8b;
+    opacity: 0.8;
+}
+
+/* Nova seção CTA */
+.testimonials-cta {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.testimonials-cta p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.testimonials-button {
+    display: inline-block;
+    background-color: #3dff8b;
+    color: #121212;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(61, 255, 139, 0.5);
+}
+
+.testimonials-button:hover {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(61, 255, 139, 0.8);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonials-section .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonials-section .section-title {
+        font-size: 2.2rem;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* Uma coluna única */
+        width: 90%;
+        max-width: 350px; /* Largura fixa para centralizar */
+    }
+    
+    .testimonial-card {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .testimonials-cta {
+        width: 90%;
+        max-width: 550px;
+
+        p{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonials-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .testimonials-grid {
+        width: 85%;
+        max-width: 300px;
+    }
+    
+    .testimonial-card {
+        padding: 20px 15px;
+    }
+}
